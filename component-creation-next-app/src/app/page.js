@@ -1,4 +1,4 @@
-import { loadYaml } from '../../lib/loadYaml';
+import { loadYaml } from '../../../npm-yaml-component-integrate/index';
 
 const HomePage = async () => {
   const data = loadYaml('data/data.yaml');
