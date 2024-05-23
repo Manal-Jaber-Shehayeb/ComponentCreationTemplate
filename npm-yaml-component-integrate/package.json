@@ -1,0 +1,22 @@
+{
+  "name": "npm-yaml-component-integrate",
+  "version": "1.0.0",
+  "description": "integrate yaml file containing data to a component in your nextjs project",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "keywords": [
+    "npm",
+    "nextjs",
+    "javascript",
+    "yaml",
+    "data"
+  ],
+  "author": "Manal Jaber-Shehayeb",
+  "license": "ISC",
+  "dependencies": {
+    "fs": "^0.0.1-security",
+    "yaml": "^2.4.2"
+  }
+}
