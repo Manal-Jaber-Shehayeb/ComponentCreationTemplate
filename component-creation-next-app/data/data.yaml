@@ -1,6 +1,6 @@
 # data.yaml
 name: "Next.js Project"
-description: "This is a sample project to demonstrate YAML integration."
+description: "This is a sample project to demonstrate YAML integration., Simple component getting data from Yaml"
 items:
   - id: 1
     title: "Item 1"

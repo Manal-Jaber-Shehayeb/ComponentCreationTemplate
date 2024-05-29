@@ -1,5 +1,5 @@
 import { loadYaml } from '../../../npm-yaml-component-integrate/index';
-import { getComponentsData } from '../../lib/getComponents';
+import { getComponentsData } from '../../../npm-yaml-component-integrate/scripts/getComponents';
 
 const HomePage = async () => {
   const data = loadYaml('data/data.yaml');
