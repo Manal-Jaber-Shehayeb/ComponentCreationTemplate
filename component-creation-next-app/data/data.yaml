@@ -6,3 +6,12 @@ items:
     title: "Item 1"
   - id: 2
     title: "Item 2"
+components:
+  - name: "ComponentA"
+    props:
+      title: "Title A"
+      description: "Description for Component A"
+  - name: "ComponentB"
+    props:
+      title: "Title B"
+      description: "Description for Component B"

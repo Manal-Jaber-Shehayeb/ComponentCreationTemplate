@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "generate-components": "node ../npm-yaml-component-integrate/scripts/generateComponents.js"
   },
   "dependencies": {
     "fs": "^0.0.1-security",
