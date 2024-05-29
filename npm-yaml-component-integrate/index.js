@@ -1,4 +1,3 @@
-
 const fs = require('fs');
 const path = require('path');
 const YAML = require('yaml');
@@ -10,5 +9,5 @@ const loadYaml = (filePath) => {
 };
 
 module.exports = {
-  loadYaml,
+  loadYaml
 };
