@@ -18,12 +18,15 @@ function updatePackageJson() {
     const packageJson = JSON.parse(data);
 
     // Define the new script you want to add
-    const newScriptName = 'generate-components';
-    const newScriptCommand = 'node scripts/generateComponents.js';
+    const newGenerateScriptName = 'generate-components';
+    const newGenerateScriptCommand = 'node ../npm-yaml-component-integrate/scripts/generateComponents.js';
+    const newPrebuildScriptName = 'prebuild';
+    const newPrebuildScriptCommand = 'node ../npm-yaml-component-integrate/scripts/ensureComponentsDir.js"';
 
     // Add or update the script in the package.json
     packageJson.scripts = packageJson.scripts || {};
-    packageJson.scripts[newScriptName] = newScriptCommand;
+    packageJson.scripts[newGenerateScriptName] = newGenerateScriptCommand;
+    packageJson.scripts[newPrebuildScriptName] = newPrebuildScriptCommand;
 
     // Stringify the updated JSON data
     const updatedPackageJson = JSON.stringify(packageJson, null, 2);

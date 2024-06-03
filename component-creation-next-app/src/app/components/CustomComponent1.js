@@ -1,6 +1,6 @@
 import React from 'react';
 
-const {{name}} = ({ title, description }) => {
+const CustomComponent1 = ({ title, description }) => {
   return (
     <div style={{background: "red"}}>
       <h1>{title}</h1>
@@ -9,4 +9,4 @@ const {{name}} = ({ title, description }) => {
   );
 };
 
-export default {{name}};
+export default CustomComponent1;
