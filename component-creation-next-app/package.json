@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "generate-components": "node ../npm-yaml-component-integrate/scripts/generateComponents.js"
+    "generate-components": "node ../npm-yaml-component-integrate/scripts/generateComponents.js",
+    "prebuild": "node ../npm-yaml-component-integrate/scripts/ensureComponentsDir.js"
   },
   "dependencies": {
     "fs": "^0.0.1-security",

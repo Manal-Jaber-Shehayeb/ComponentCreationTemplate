@@ -7,11 +7,12 @@ items:
   - id: 2
     title: "Item 2"
 components:
-  - name: "ComponentA"
+  - name: "CustomComponent1"
     props:
-      title: "Title A"
-      description: "Description for Component A"
-  - name: "ComponentB"
+      title: "Title 1"
+      description: "Description for Component 1"
+  - name: "CustomComponent2"
     props:
-      title: "Title B"
-      description: "Description for Component B"
+      title: "Title 2"
+      description: "Description for Component 2"
+      details: "Details for Component 2"
