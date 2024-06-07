@@ -1,9 +1,10 @@
 // import { loadYaml } from '../../../npm-yaml-component-integrate/index';
-import { getComponentsData } from '../../../npm-yaml-component-integrate/scripts/getComponentsData';
+import { getComponentsNames } from 'npm-yaml-component-integrate/scripts/getComponentsNames';
+import { getComponentProps } from 'npm-yaml-component-integrate/scripts/getComponentProps';
 
 const HomePage = async () => {
   // const data = loadYaml('data/data.yaml'); // Testing loadYaml function
-  const componentsData = getComponentsData('/src/app/components', 'data/data.yaml');
+  const componentsNames = getComponentsNames('/src/app/components');
   return (
     <div>
       {/* <h1>{data.name}</h1>
@@ -15,13 +16,13 @@ const HomePage = async () => {
       </ul> */}
       <div>
       <h1>Dynamic Components from components library and filled by Yaml</h1>
-      {componentsData.length>0 && componentsData?.map((component) => {
-        const {name, props} = component
+      {componentsNames.length>0 && componentsNames?.map((component) => {
+        const props = getComponentProps(component, 'data/data.yaml' )
         // Dynamically import the component
-        const Component = require(`./components/${name}`)?.default;
+        const Component = require(`./components/${component}`)?.default;
         return (
-          <div key={name}>
-            <h2>{name}</h2>
+          <div key={component}>
+            <h2>{component}</h2>
             <Component {...props}/>
           </div>
         );
