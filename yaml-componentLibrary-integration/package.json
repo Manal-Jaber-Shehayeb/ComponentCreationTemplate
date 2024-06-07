@@ -1,11 +1,11 @@
 {
-  "name": "npm-yaml-component-integrate",
+  "name": "yaml-component-library-generation",
   "version": "1.0.0",
-  "description": "integrate yaml file containing data to a component in your nextjs project",
+  "description": "integrate yaml file containing data to generate components from a component library in your nextjs project",
   "main": "index.js",
   "scripts": {
     "test": "node index.js",
-    "postinstall": "echo 'Running postinstall script'; node node_modules/npm-yaml-component-integrate/scripts/updatePackageJson.js"
+    "postinstall": "echo 'Running postinstall script'; node node_modules/yaml-component-library-generation/scripts/updatePackageJson.js"
   },
   "keywords": [
     "npm",

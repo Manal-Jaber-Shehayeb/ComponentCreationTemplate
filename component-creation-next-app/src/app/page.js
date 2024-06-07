@@ -1,6 +1,6 @@
-// import { loadYaml } from '../../../npm-yaml-component-integrate/index';
-import { getComponentsNames } from 'npm-yaml-component-integrate/scripts/getComponentsNames';
-import { getComponentProps } from 'npm-yaml-component-integrate/scripts/getComponentProps';
+// import { loadYaml } from 'yaml-component-library-generation/index';
+import { getComponentsNames } from 'yaml-component-library-generation/scripts/getComponentsNames';
+import { getComponentProps } from 'yaml-component-library-generation/scripts/getComponentProps';
 
 const HomePage = async () => {
   // const data = loadYaml('data/data.yaml'); // Testing loadYaml function

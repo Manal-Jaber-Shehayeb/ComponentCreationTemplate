@@ -21,7 +21,7 @@ function updatePackageJson() {
 
     // Define the new script you want to add
     const newGenerateScriptName = 'generate-components';
-    const newGenerateScriptCommand = 'node node_modules/npm-yaml-component-integrate/scripts/generateComponents.js';
+    const newGenerateScriptCommand = 'node node_modules/yaml-component-library-generation/scripts/generateComponents.js';
 
     // Add or update the script in the package.json
     packageJson.scripts = packageJson.scripts || {};
