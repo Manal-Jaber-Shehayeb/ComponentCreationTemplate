@@ -1,11 +1,13 @@
 const fs = require('fs');
 const path = require('path');
 
+  console.log('Running updatePackageJson.js...');
+
 // Function to update package.json in the project where this package is installed
 function updatePackageJson() {
   // Determine the path to the parent project's package.json
-  const projectRoot = path.resolve(process.cwd(), '../../');
-  const packageJsonPath = path.join(projectRoot, 'package.json');
+  const packageJsonPath = path.join(process.cwd(), 'package.json');
+  console.log('packageJsonPath:', packageJsonPath);
 
   // Read the existing package.json file
   fs.readFile(packageJsonPath, 'utf8', (err, data) => {
@@ -19,14 +21,11 @@ function updatePackageJson() {
 
     // Define the new script you want to add
     const newGenerateScriptName = 'generate-components';
-    const newGenerateScriptCommand = 'node ../npm-yaml-component-integrate/scripts/generateComponents.js';
-    const newPrebuildScriptName = 'prebuild';
-    const newPrebuildScriptCommand = 'node ../npm-yaml-component-integrate/scripts/ensureComponentsDir.js"';
+    const newGenerateScriptCommand = 'node node_modules/npm-yaml-component-integrate/scripts/generateComponents.js';
 
     // Add or update the script in the package.json
     packageJson.scripts = packageJson.scripts || {};
     packageJson.scripts[newGenerateScriptName] = newGenerateScriptCommand;
-    packageJson.scripts[newPrebuildScriptName] = newPrebuildScriptCommand;
 
     // Stringify the updated JSON data
     const updatedPackageJson = JSON.stringify(packageJson, null, 2);

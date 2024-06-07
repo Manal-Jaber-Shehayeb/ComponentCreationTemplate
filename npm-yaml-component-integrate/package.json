@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "node index.js",
-    "postinstall": "node scripts/updatePackageJson.js"
+    "postinstall": "echo 'Running postinstall script'; node node_modules/npm-yaml-component-integrate/scripts/updatePackageJson.js"
   },
   "keywords": [
     "npm",
@@ -17,6 +17,7 @@
   "author": "Manal Jaber-Shehayeb",
   "license": "ISC",
   "dependencies": {
+    "dotenv": "^16.4.5",
     "fs": "^0.0.1-security",
     "minimist": "^1.2.8",
     "yaml": "^2.4.2"
