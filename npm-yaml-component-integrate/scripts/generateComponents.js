@@ -2,6 +2,7 @@ const path = require('path');
 const minimist = require('minimist');
 const fs = require('fs');
 const loadYamlFile = require('../index.js');
+import {ComponentsDirectory, TemplatesDirectory} from '../constants'
 // start generate
 
 // Parse command-line arguments
@@ -13,7 +14,7 @@ data.components.forEach((component) => {
   const { name, props } = component;
 
   // Read template file
-  const templateFilePath = path.join('../',`template-component-library/src/templates/${name}/index.js`);
+  const templateFilePath = path.join(TemplatesDirectory,`${name}/index.js`);
   const templateFile = fs.readFileSync(templateFilePath, 'utf8');
   let componentFile = templateFile;
 
@@ -21,7 +22,7 @@ data.components.forEach((component) => {
   componentFile = componentFile.replace(/{{name}}/g, name);
 
   // Create the new component file
-  const componentFilePath = path.join(process.cwd(), `src/app/components/${name}.js`);
+  const componentFilePath = path.join(process.cwd(), ComponentsDirectory, `${name}.js`);
   fs.writeFileSync(componentFilePath, componentFile);
 
   console.log(`Generated ${name}.js`);
