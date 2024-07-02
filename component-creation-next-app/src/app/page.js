@@ -1,6 +1,8 @@
 // import { loadYaml } from 'yaml-component-library-generation/index';
-import { getComponentsNames } from 'yaml-component-library-generation/scripts/getComponentsNames';
-import { getComponentProps } from 'yaml-component-library-generation/scripts/getComponentProps';
+// import { getComponentsNames } from 'yaml-component-library-generation/scripts/getComponentsNames';
+// import { getComponentProps } from 'yaml-component-library-generation/scripts/getComponentProps';
+import { getComponentsNames } from '../../../yaml-component-library-integration';
+import { getComponentProps } from '../../../yaml-component-library-integration';
 
 const HomePage = async () => {
   // const data = loadYaml('data/data.yaml'); // Testing loadYaml function

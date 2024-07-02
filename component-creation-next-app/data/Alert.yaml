@@ -1,0 +1,11 @@
+components:
+  - name: "Alert"
+    category: "Error"
+    subcategory: "FB-ALRT-ERROR-00006"
+    props:
+      children: (
+        <>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Soluta minima rerum veritatis optio atque impedit, enim
+          quisquam, excepturi consectetur quaerat odio hic, natus aspernatur ex architecto quas dolor nemo alias.
+        </>
+      )
