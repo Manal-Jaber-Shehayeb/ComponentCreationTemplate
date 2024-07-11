@@ -1,4 +1,5 @@
 {
-    "componentsDestPath": "src/app/components",
-    "componentsSrcPath": "../template-component-library/src/templates"
+    "componentsDestPath": "path/to/components",
+    "componentsSrcPath": "path/to/src/folder",
+    "dataFilePath": "path/to/data-file.yaml"
 }

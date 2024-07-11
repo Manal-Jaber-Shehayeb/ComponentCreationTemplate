@@ -6,10 +6,11 @@ is the sample project where we want to utilize components from component library
     1.2- Use ```npm run dev``` to run
     1.3- Run ```npm install yaml-component-library-generation```
         https://www.npmjs.com/package/yaml-component-library-generation
-    1.4- Run ```node node_modules/yaml-component-library-generation/scripts/postinstall.js```
-    1.5- Use ```npm run generate-components -- --dataFilePath=data/data.yaml``` to put CustomComponent1 in src/app/components using data from data/data.yaml
-    1.6- To get componentsProps use:
-    `import { getComponentsNames } from 'yaml-component-library-generation/scripts/getComponentsNames';`
+    1.4- Run ```node node_modules/yaml-component-library-integration/scripts/postinstall.js```
+    1.5- Adjust the paths according to your project in `yaml-config.json` added to the root of your project.
+    1.6- Use ```npm run generate-components``` to put CustomComponent1 in src/app/components using data from data/data.yaml
+    1.7- To get componentsProps use:
+    `import { getComponentsNames } from 'yaml-component-library-integration/scripts/getComponentsNames';`
     `const props = getComponentProps(component, 'data/data.yaml' )`
         `return (
             <Component {...props}/>

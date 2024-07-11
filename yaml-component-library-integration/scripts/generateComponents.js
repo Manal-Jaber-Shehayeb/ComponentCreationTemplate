@@ -40,19 +40,15 @@ const path = require('path');
 const fs = require('fs-extra'); // Use fs-extra instead of fs
 const getEnvData = require('../helpers/getEnvData').getEnvData;
 const loadYaml = require('../helpers/loadYaml').loadYaml;
-const minimist = require('minimist');
 
 // Start generate
-
-// Parse command-line arguments
-const args = minimist(process.argv.slice(2));
-const dataFilePath = args?.dataFilePath
 
 // Getting env data
 const configPath = './yaml-config.json'
 const envData = getEnvData(configPath);
 const componentsDestPath = envData?.componentsDestPath;
 const componentsSrcPath = envData?.componentsSrcPath;
+const dataFilePath = envData?.dataFilePath;
 
 // Getting yaml data
 const data = loadYaml(dataFilePath);

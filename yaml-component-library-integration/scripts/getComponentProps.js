@@ -35,29 +35,39 @@ const path = require('path');
 const YAML = require('yaml');
 const getEnvData = require('../helpers/getEnvData').getEnvData;
 
-function getComponentProps(componentName, yamlFile) {
-  if (componentName && yamlFile) {
+function getComponentProps(componentName) {
+  if (componentName) {
     const configPath = './yaml-config.json';
     const envData = getEnvData(configPath);
     const componentsDestPath = envData?.componentsDestPath;
+    const dataFilePath = envData?.dataFilePath;
 
     // Adjust the component path to handle directories
     const dirPath = path.join(process.cwd(), componentsDestPath, componentName);
-    const yamlPath = path.join(process.cwd(), yamlFile);
+    const yamlPath = path.join(process.cwd(), dataFilePath);
+
+    // Possible file extensions for component files
+    const extensions = ['.js', '.jsx', '.ts', '.tsx'];
+    let componentFile = null;
 
     // Check if the directory or file exists
     if (fs.existsSync(dirPath) && fs.existsSync(yamlPath)) {
-      let indexPath;
-
       // Check if the dirPath is a directory
       if (fs.statSync(dirPath).isDirectory()) {
-        indexPath = path.join(dirPath, 'index.js');
-        if (!fs.existsSync(indexPath)) {
-          console.error(`Component index file not found: ${indexPath}`);
+        for (const ext of extensions) {
+          const indexPath = path.join(dirPath, `index${ext}`);
+          if (fs.existsSync(indexPath)) {
+            componentFile = indexPath;
+            break;
+          }
+        }
+
+        if (!componentFile) {
+          console.error(`Component index file not found in: ${dirPath}`);
           return null;
         }
       } else {
-        indexPath = dirPath;
+        componentFile = dirPath;
       }
 
       const yamlFileContent = fs.readFileSync(yamlPath, 'utf8');
@@ -76,4 +86,3 @@ function getComponentProps(componentName, yamlFile) {
 module.exports = {
   getComponentProps
 };
-
