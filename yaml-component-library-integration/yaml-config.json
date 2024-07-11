@@ -1,0 +1,5 @@
+{
+    "componentsDestPath": "path/to/components",
+    "componentsSrcPath": "path/to/src/folder",
+    "dataFilePath": "path/to/data-file.yaml"
+}

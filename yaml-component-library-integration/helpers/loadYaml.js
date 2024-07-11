@@ -7,7 +7,6 @@ const loadYaml = (filePath) => {
   const fileContents = fs.readFileSync(fullPath, 'utf8');
   return YAML.parse(fileContents);
 };
-
 module.exports = {
   loadYaml
-};
+}

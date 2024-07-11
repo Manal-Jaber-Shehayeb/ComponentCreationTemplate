@@ -1,0 +1,25 @@
+{
+  "name": "yaml-component-library-integration",
+  "version": "2.1.1",
+  "description": "integrate yaml file containing data to generate components from a component library in your nextjs project",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "keywords": [
+    "npm",
+    "nextjs",
+    "javascript",
+    "yaml",
+    "data"
+  ],
+  "author": "Manal Jaber-Shehayeb",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "fs": "^0.0.1-security",
+    "fs-extra": "^11.2.0",
+    "minimist": "^1.2.8",
+    "yaml": "^2.4.5"
+  }
+}
