@@ -1,13 +1,10 @@
 const fs = require('fs');
 const path = require('path');
 
-  console.log('Running updatePackageJson.js...');
-
 // Function to update package.json in the project where this package is installed
 function updatePackageJson() {
   // Determine the path to the parent project's package.json
   const packageJsonPath = path.join(process.cwd(), 'package.json');
-  console.log('packageJsonPath:', packageJsonPath);
 
   // Read the existing package.json file
   fs.readFile(packageJsonPath, 'utf8', (err, data) => {

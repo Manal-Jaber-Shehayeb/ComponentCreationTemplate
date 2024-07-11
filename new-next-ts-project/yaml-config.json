@@ -1,5 +1,0 @@
-{
-    "componentsDestPath": "src/app/components",
-    "componentsSrcPath": "../../WTBEI-Storybook-Library/app/marketing-ui/hero-sections",
-    "dataFilePath": "data/hero.yaml"
-}
